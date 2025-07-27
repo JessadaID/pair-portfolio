@@ -17,3 +17,14 @@ themeToggle.addEventListener('click', () => {
 function updateThemeIcon(theme) {
     themeToggle.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 }
+
+// Loading Animation
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
