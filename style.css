@@ -1,0 +1,108 @@
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --section-bg: #262626;
+    --hover-bg-color: #343a40;
+    --hover-text-color: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --section-bg: #f8f9fa;
+    --hover-bg-color: #e9ecef;
+    --hover-text-color: #000000;
+}
+
+
+/* Basic Body Reset */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 70px; /* Add padding to body to avoid content being hidden behind the fixed navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--section-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Make navbar stick to the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Pushes items to the ends */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+}
+
+/* Logo Styling */
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Navigation Menu Styling */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-left: 25px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+}
+
+/* Dark Mode Toggle Styling */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.dark-mode-toggle label {
+    margin-right: 8px;
+}
+
+/* Hamburger Menu Icon - Hide on desktop */
+.nav-toggle {
+  display: none; /* We will hide this on larger screens */
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-color);
+}
