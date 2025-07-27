@@ -1,14 +1,36 @@
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --section-bg: #262626;
+    --hover-bg-color: #343a40;
+    --hover-text-color: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --section-bg: #f8f9fa;
+    --hover-bg-color: #e9ecef;
+    --hover-text-color: #000000;
+}
+
+
 /* Basic Body Reset */
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
   padding-top: 70px; /* Add padding to body to avoid content being hidden behind the fixed navbar */
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: #ffffff;
+  background-color: var(--section-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed; /* Make navbar stick to the top */
   top: 0;
@@ -30,7 +52,7 @@ body {
 .nav-logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -47,7 +69,7 @@ body {
 }
 
 .nav-link {
-  color: #555;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 1rem;
   padding: 8px 12px;
@@ -56,15 +78,15 @@ body {
 }
 
 .nav-link:hover {
-  background-color: #f0f0f0;
-  color: #000;
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
 }
 
 /* Dark Mode Toggle Styling */
 .dark-mode-toggle {
   display: flex;
   align-items: center;
-  color: #333;
+  color: var(--text-color);
 }
 
 .dark-mode-toggle label {
@@ -82,5 +104,5 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: #333;
+  background-color: var(--text-color);
 }
