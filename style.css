@@ -304,7 +304,7 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -340,7 +340,7 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -379,6 +379,7 @@ body {
 .project-links {
     display: flex;
     gap: 1rem;
+    margin-top: 30px;
 }
 
 .btn-small {
@@ -476,8 +477,8 @@ body {
 
 /* Footer */
 .footer {
-    background: #2c3e50;
-    color: var(--text-color);
+    background: var(--text-color);
+    color: var(--bg-color);
     text-align: center;
     padding: 2rem 0;
 }
